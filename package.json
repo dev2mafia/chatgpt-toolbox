@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "pre-commit": "lint-staged",
+    "lint": "eslint src",
     "prettier": "prettier --write 'src/**/*.{ts,tsx}'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,9 +28,20 @@
     "@types/node": "^18.15.3",
     "@types/node-fetch": "^2.6.2",
     "@types/uuid": "^9.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
     "debug": "^4.3.4",
+    "eslint": "^8.36.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
     "prettier": "^2.8.4",
     "tsup": "^6.6.3",
     "typescript": "^5.0.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }
