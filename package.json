@@ -2,7 +2,7 @@
   "name": "chatgpt-toolbox",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "pre-commit": "lint-staged",
     "lint": "eslint src",
