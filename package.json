@@ -1,9 +1,13 @@
 {
-  "name": "chatgpt-toolbox",
+  "name": "@dev2mafia/chatgpt-toolbox",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "publish": "npm publish --access public",
     "pre-commit": "lint-staged",
     "lint": "eslint src",
     "prettier": "prettier --write 'src/**/*.{ts,tsx}'",
