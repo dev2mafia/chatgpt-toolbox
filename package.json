@@ -4,9 +4,31 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prettier": "prettier --write 'src/**/*.{ts,tsx}'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "curlconverter": "^4.5.0",
+    "fetch-cookie": "^2.1.0",
+    "hpagent": "^1.2.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "node-fetch": "^2.6.9",
+    "openai": "^3.2.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.7",
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.15.3",
+    "@types/node-fetch": "^2.6.2",
+    "@types/uuid": "^9.0.1",
+    "debug": "^4.3.4",
+    "prettier": "^2.8.4",
+    "tsup": "^6.6.3",
+    "typescript": "^5.0.2"
+  }
 }
