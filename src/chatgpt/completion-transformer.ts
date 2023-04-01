@@ -24,9 +24,7 @@ export class CompletionTransformer extends Transform {
 
   async checkAndPush(done = false) {
     const textToCheck = this.textsToCheck.shift()
-    /**
-     * 如果没有文本，则直接结束
-     */
+
     if (!textToCheck) {
       this.endStream()
       return
@@ -39,13 +37,9 @@ export class CompletionTransformer extends Transform {
       return
     }
 
-    // TODO: censor check
-
     this.texts.push(textToCheck)
     let textToPush = textToCheck
 
-    // TODO: transformer for textToPush
-    // such as add prefix, suffix, translate, etc.
     this.push(textToPush)
 
     if (done) {
