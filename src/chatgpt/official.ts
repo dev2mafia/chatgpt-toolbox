@@ -1,10 +1,13 @@
 import {
+  ChatCompletionRequestMessage,
   Configuration,
   CreateChatCompletionRequest,
   CreateChatCompletionResponse,
   OpenAIApi,
 } from 'openai'
 import { httpsProxyAgent } from '../utils/agent'
+
+export type ChatMessage = ChatCompletionRequestMessage
 
 export class OfficialChatGPTAPI {
   private apiKey: string
@@ -30,7 +33,7 @@ export class OfficialChatGPTAPI {
 
     const completion = await this.client.createChatCompletion(
       {
-        temperature: 0.4,
+        temperature: 1,
         frequency_penalty: 0.5,
         max_tokens: 1000,
         ...request,
@@ -41,5 +44,16 @@ export class OfficialChatGPTAPI {
       },
     )
     return completion.data
+  }
+
+  async checkIsValidKey(): Promise<boolean> {
+    try {
+      await this.client.listModels({
+        httpsAgent: httpsProxyAgent,
+      })
+      return true
+    } catch (error) {
+      return false
+    }
   }
 }
