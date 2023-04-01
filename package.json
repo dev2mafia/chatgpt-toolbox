@@ -21,6 +21,7 @@
     "curlconverter": "^4.5.0",
     "debug": "^4.3.4",
     "fetch-cookie": "^2.1.0",
+    "gpt3-tokenizer": "^1.1.5",
     "hpagent": "^1.2.0",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",

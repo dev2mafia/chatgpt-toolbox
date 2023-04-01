@@ -1,4 +1,5 @@
 export { Authenticator } from './chatgpt/authenticator'
 export { UnofficialChatGPTAPI } from './chatgpt/unofficial'
-export { OfficialChatGPTAPI } from './chatgpt/official'
+export { OfficialChatGPTAPI, ChatMessage } from './chatgpt/official'
+export { countMessagesTokens } from './chatgpt/tokenizer'
 export { extractCurlCookies } from './utils/curlconverter'
